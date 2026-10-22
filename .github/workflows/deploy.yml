@@ -21,7 +21,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
-      VITE_BASE_PATH: /react-first-project/
+      VITE_BASE_PATH: /chess-lives/
 
     steps:
       - name: Checkout
