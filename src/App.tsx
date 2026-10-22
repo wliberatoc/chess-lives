@@ -1,57 +1,56 @@
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Footer } from './components/footer';
 import { Header } from './components/header';
+import { Pagination } from './components/pagination';
 import { StreamerGrid } from './components/streamer-grid';
-import { fetchStreamers } from './services/chess-api';
-import type { Streamer } from './types/streamer';
+import { useStreamers } from './hooks/use-streamers';
 import './App.css';
 
+const ITEMS_PER_PAGE = 12;
+
 export default function App() {
-	const [streamers, setStreamers] = useState<Streamer[]>([]);
-	const [isLoading, setIsLoading] = useState<boolean>(true);
-	const [error, setError] = useState<string | null>(null);
+	const { streamers, isLoading, error, refresh } = useStreamers();
+	const [currentPage, setCurrentPage] = useState<number>(1);
+	const totalPages = Math.max(1, Math.ceil(streamers.length / ITEMS_PER_PAGE));
+	const activePage = Math.min(currentPage, totalPages);
+	const visibleStreamers = useMemo(() => {
+		const firstItem = (activePage - 1) * ITEMS_PER_PAGE;
+		return streamers.slice(firstItem, firstItem + ITEMS_PER_PAGE);
+	}, [activePage, streamers]);
 
-	useEffect(() => {
-		const controller = new AbortController();
-
-		async function loadStreamers() {
-			try {
-				setIsLoading(true);
-				setError(null);
-
-				const data = await fetchStreamers(controller.signal);
-				setStreamers(data);
-			} catch (requestError) {
-				if (requestError instanceof Error && requestError.name === 'AbortError') {
-					return;
-				}
-
-				setError('Não foi possível carregar as lives. Tente novamente.');
-			} finally {
-				if (!controller.signal.aborted) {
-					setIsLoading(false);
-				}
-			}
-		}
-
-		loadStreamers();
-
-		return () => controller.abort();
-	}, []);
+	function handlePageChange(page: number) {
+		setCurrentPage(page);
+		document.getElementById('catalogo')?.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+		});
+	}
 
 	return (
 		<div className="app">
-			<Header />
+			<Header isRefreshing={isLoading} onRefresh={refresh} />
 
 			<main className="content" id="catalogo">
-				{isLoading && <p className="notice">Carregando streamers...</p>}
+				{isLoading && streamers.length === 0 && (
+					<p className="notice" aria-live="polite">Carregando streamers...</p>
+				)}
 				{error && <p className="notice notice-error" role="alert">{error}</p>}
 				{!isLoading && !error && streamers.length === 0 && (
 					<p className="notice">Nenhum streamer foi encontrado.</p>
 				)}
 
-				{!isLoading && !error && streamers.length > 0 && (
-					<StreamerGrid streamers={streamers} />
+				{streamers.length > 0 && (
+					<>
+						<StreamerGrid
+							streamers={visibleStreamers}
+							totalCount={streamers.length}
+						/>
+						<Pagination
+							currentPage={activePage}
+							totalPages={totalPages}
+							onPageChange={handlePageChange}
+						/>
+					</>
 				)}
 			</main>
 

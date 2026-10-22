@@ -40,23 +40,23 @@ Este documento organiza a implementação descrita no [PRD](./PRD.md). Cada fase
 - [x] Executar o lint e o build sem erros.
 - [x] Marcar a Fase 2 como concluída após a aprovação dos prints e das validações.
 
-## Fase 3 — Atualização e paginação
+## Fase 3 — Atualização e paginação ✅ Concluída
 
-- [ ] Implementar o botão “Atualizar lista” e evitar cliques repetidos durante o carregamento.
-- [ ] Atualizar automaticamente os dados a cada 5 minutos.
-- [ ] Limpar o intervalo no retorno do `useEffect`.
-- [ ] Implementar a paginação abaixo do grid.
-- [ ] Indicar a página atual e desabilitar os controles sem destino.
-- [ ] Ao trocar de página, levar o usuário ao início do catálogo.
+- [x] Implementar o botão “Atualizar lista” e evitar cliques repetidos durante o carregamento.
+- [x] Atualizar automaticamente os dados a cada 5 minutos.
+- [x] Limpar o intervalo no retorno do `useEffect`.
+- [x] Implementar a paginação abaixo do grid.
+- [x] Indicar a página atual e desabilitar os controles sem destino.
+- [x] Ao trocar de página, levar o usuário ao início do catálogo.
 
 ### Validação da fase
 
-- [ ] Confirmar que a atualização manual refaz a consulta.
-- [ ] Confirmar que a atualização automática ocorre sem duplicar intervalos.
-- [ ] Confirmar que a paginação preserva todos os itens e funciona por mouse, toque e teclado.
-- [ ] Confirmar que os controles respondem corretamente na primeira e na última página.
-- [ ] Executar o lint e o build sem erros.
-- [ ] Marcar a Fase 3 como concluída após todas as validações.
+- [x] Confirmar que a atualização manual refaz a consulta.
+- [x] Confirmar que a atualização automática ocorre sem duplicar intervalos.
+- [x] Confirmar que a paginação preserva todos os itens e funciona por mouse, toque e teclado.
+- [x] Confirmar que os controles respondem corretamente na primeira e na última página.
+- [x] Executar o lint e o build sem erros.
+- [x] Marcar a Fase 3 como concluída após todas as validações.
 
 ## Fase 4 — Revisão final
 

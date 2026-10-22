@@ -19,3 +19,19 @@ export function StreamIcon({ className }: IconProps) {
 		</svg>
 	);
 }
+
+export function RefreshIcon({ className }: IconProps) {
+	return (
+		<svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+			<path d="M12 4a8 8 0 1 0 7.45 10.9l-2.8-1.03A5 5 0 1 1 15.54 8H13v3h7V4h-3v2.02A7.96 7.96 0 0 0 12 4Z" />
+		</svg>
+	);
+}
+
+export function ChevronIcon({ className }: IconProps) {
+	return (
+		<svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+			<path d="m9 5 7 7-7 7V5Z" />
+		</svg>
+	);
+}

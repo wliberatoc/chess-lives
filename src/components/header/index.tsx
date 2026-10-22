@@ -1,16 +1,26 @@
 import { ChessIcon } from '../icons';
+import { RefreshButton } from '../refresh-button';
 import './header.css';
 
-export function Header() {
+type HeaderProps = {
+	isRefreshing: boolean;
+	onRefresh: () => void;
+};
+
+export function Header({ isRefreshing, onRefresh }: HeaderProps) {
 	return (
 		<header className="site-header">
 			<div className="header-inner">
-				<a className="brand" href="#catalogo" aria-label="Chess Live — ir para o catálogo">
-					<span className="brand-mark">
-						<ChessIcon className="brand-icon" />
-					</span>
-					<span>Chess Live</span>
-				</a>
+				<div className="topbar">
+					<a className="brand" href="#catalogo" aria-label="Chess Live — ir para o catálogo">
+						<span className="brand-mark">
+							<ChessIcon className="brand-icon" />
+						</span>
+						<span>Chess Live</span>
+					</a>
+
+					<RefreshButton isRefreshing={isRefreshing} onRefresh={onRefresh} />
+				</div>
 
 				<div className="hero-copy">
 					<p className="eyebrow">Streamers de xadrez</p>

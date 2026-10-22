@@ -14,6 +14,13 @@
 	padding-block: 1rem 3.5rem;
 }
 
+.topbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
 .brand {
 	display: inline-flex;
 	align-items: center;
