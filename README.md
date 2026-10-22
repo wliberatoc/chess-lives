@@ -28,3 +28,9 @@ npm run build
 ```
 
 Os requisitos e o acompanhamento das fases estão disponíveis em [`.docs/PRD.md`](.docs/PRD.md) e [`.docs/tasks.md`](.docs/tasks.md).
+
+## Publicação
+
+O projeto é publicado automaticamente pelo GitHub Actions quando alterações são enviadas para a branch `main`.
+
+URL: [https://wliberatoc.github.io/react-first-project/](https://wliberatoc.github.io/react-first-project/)
