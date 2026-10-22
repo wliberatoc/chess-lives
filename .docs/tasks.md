@@ -72,3 +72,11 @@ Este documento organiza a implementação descrita no [PRD](./PRD.md). Cada fase
 - [x] Registrar eventuais pendências de filtros e favoritos como melhorias futuras.
 - [x] Marcar a Fase 4 e o projeto como concluídos somente após a aprovação final.
 
+## Incremento — Busca e ordenação ✅ Concluído
+
+- [x] Adicionar busca de streamers por nome no cabeçalho.
+- [x] Aplicar a busca antes da paginação e retornar à primeira página ao pesquisar.
+- [x] Adicionar ordenação por canais ao vivo, nome crescente e nome decrescente.
+- [x] Posicionar a ordenação acima da quantidade de streamers.
+- [x] Exibir mensagem quando nenhum streamer corresponder à busca.
+

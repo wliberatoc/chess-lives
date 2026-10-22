@@ -5,6 +5,8 @@ Catálogo responsivo de streamers de xadrez, desenvolvido com React e TypeScript
 ## Funcionalidades
 
 - Catálogo responsivo com até seis cards por linha.
+- Busca de streamers por nome.
+- Ordenação por status da live ou nome.
 - Indicador vermelho para streamers ao vivo.
 - Atualização manual e automática a cada cinco minutos.
 - Paginação com 12 streamers por página.

@@ -32,6 +32,8 @@ Facilitar a descoberta de lives de xadrez em uma interface simples, atualizada e
 - Abrir links externos com segurança, preferencialmente em uma nova aba.
 - Atualizar os dados automaticamente a cada 5 minutos.
 - Paginar a listagem para limitar a quantidade de cards exibidos simultaneamente.
+- Permitir a busca de streamers pelo nome diretamente no cabeçalho.
+- Permitir a ordenação por canais ao vivo, nome crescente e nome decrescente.
 - Exibir estados de carregamento, lista vazia e erro de consulta.
 - Exibir no rodapé: `© [ano atual] Willian Developer. Todos os direitos reservados.`
 

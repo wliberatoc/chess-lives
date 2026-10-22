@@ -22,6 +22,13 @@
 	letter-spacing: -0.025em;
 }
 
+.grid-actions {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 0.45rem;
+}
+
 .result-count {
 	margin: 0;
 	color: var(--muted);
@@ -33,6 +40,27 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 1rem;
+}
+
+.grid-empty {
+	margin: 3rem 0;
+	padding: 1.5rem;
+	border: 1px dashed var(--line);
+	border-radius: 0.85rem;
+	color: var(--muted);
+	background: rgb(255 253 247 / 55%);
+	text-align: center;
+}
+
+@media (max-width: 32rem) {
+	.grid-heading {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.grid-actions {
+		align-items: flex-start;
+	}
 }
 
 @media (min-width: 36rem) {

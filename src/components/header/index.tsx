@@ -1,13 +1,21 @@
 import { ChessIcon } from '../icons';
 import { RefreshButton } from '../refresh-button';
+import { SearchBar } from '../search-bar';
 import './header.css';
 
 type HeaderProps = {
 	isRefreshing: boolean;
 	onRefresh: () => void;
+	searchTerm: string;
+	onSearchChange: (value: string) => void;
 };
 
-export function Header({ isRefreshing, onRefresh }: HeaderProps) {
+export function Header({
+	isRefreshing,
+	onRefresh,
+	searchTerm,
+	onSearchChange,
+}: HeaderProps) {
 	return (
 		<header className="site-header">
 			<div className="header-inner">
@@ -28,6 +36,8 @@ export function Header({ isRefreshing, onRefresh }: HeaderProps) {
 					<p className="subtitle">
 						Encontre criadores, acompanhe quem está ao vivo e entre na partida.
 					</p>
+
+					<SearchBar value={searchTerm} onChange={onSearchChange} />
 				</div>
 			</div>
 		</header>

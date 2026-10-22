@@ -35,3 +35,11 @@ export function ChevronIcon({ className }: IconProps) {
 		</svg>
 	);
 }
+
+export function SearchIcon({ className }: IconProps) {
+	return (
+		<svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+			<path d="M10.5 4a6.5 6.5 0 1 0 3.98 11.64L19.84 21 21 19.84l-5.36-5.36A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z" />
+		</svg>
+	);
+}
