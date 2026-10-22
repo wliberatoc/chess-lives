@@ -27,7 +27,7 @@ Facilitar a descoberta de lives de xadrez em uma interface simples, atualizada e
 - Exibir um card para cada streamer retornado, contendo:
   - nome de usuário (`username`);
   - avatar (`avatar`), com texto alternativo;
-  - indicador verde quando `is_live` for `true` e vermelho quando for `false`;
+  - indicador vermelho quando `is_live` for `true`, sem indicador quando estiver offline;
   - link ou botão “Ir para a live”, usando `twitch_url`.
 - Abrir links externos com segurança, preferencialmente em uma nova aba.
 - Atualizar os dados automaticamente a cada 5 minutos.

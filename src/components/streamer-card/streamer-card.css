@@ -1,0 +1,78 @@
+.stream-card {
+	position: relative;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1.5rem 1rem 1rem;
+	border: 1px solid var(--line);
+	border-radius: 1rem;
+	background: var(--surface);
+	box-shadow: 0 0.7rem 2rem rgb(23 33 27 / 7%);
+	text-align: center;
+	transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.stream-card:hover {
+	transform: translateY(-0.2rem);
+	box-shadow: 0 1rem 2.4rem rgb(23 33 27 / 12%);
+}
+
+.avatar {
+	width: 5.5rem;
+	aspect-ratio: 1;
+	border: 0.25rem solid var(--surface-soft);
+	border-radius: 50%;
+	background: var(--surface-soft);
+	object-fit: cover;
+}
+
+.card-copy {
+	width: 100%;
+	margin-block: 1rem 1.25rem;
+}
+
+.live-label {
+	margin: 0 0 0.35rem;
+	color: var(--muted);
+	font-size: 0.7rem;
+	font-weight: 750;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.card-copy h2 {
+	overflow: hidden;
+	margin: 0;
+	color: var(--ink);
+	font-size: 1rem;
+	font-weight: 800;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.live-link {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.45rem;
+	margin-top: auto;
+	padding: 0.7rem 0.8rem;
+	border-radius: 0.65rem;
+	color: #fff;
+	background: var(--green);
+	font-size: 0.85rem;
+	font-weight: 750;
+	text-decoration: none;
+	transition: background-color 160ms ease;
+}
+
+.live-link:hover {
+	background: var(--green-dark);
+}
+
+.link-icon {
+	width: 1rem;
+	fill: currentColor;
+}

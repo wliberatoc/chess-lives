@@ -1,0 +1,25 @@
+.site-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.55rem;
+	padding: 1.75rem 1rem;
+	color: #dce8df;
+	background: #10271b;
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+.site-footer p {
+	margin: 0;
+}
+
+.footer-icon {
+	width: 1.3rem;
+	flex: 0 0 auto;
+	fill: #f0c36a;
+}
+
+.footer-icon .icon-eye {
+	fill: #10271b;
+}

@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Footer } from './components/footer';
+import { Header } from './components/header';
+import { StreamerGrid } from './components/streamer-grid';
 import { fetchStreamers } from './services/chess-api';
 import type { Streamer } from './types/streamer';
 import './App.css';
@@ -37,18 +40,22 @@ export default function App() {
 	}, []);
 
 	return (
-		<main>
-			<h1>Escolha sua live</h1>
+		<div className="app">
+			<Header />
 
-			{isLoading && <p>Carregando streamers...</p>}
-			{error && <p role="alert">{error}</p>}
-			{!isLoading && !error && streamers.length === 0 && (
-				<p>Nenhum streamer foi encontrado.</p>
-			)}
+			<main className="content" id="catalogo">
+				{isLoading && <p className="notice">Carregando streamers...</p>}
+				{error && <p className="notice notice-error" role="alert">{error}</p>}
+				{!isLoading && !error && streamers.length === 0 && (
+					<p className="notice">Nenhum streamer foi encontrado.</p>
+				)}
 
-			{!isLoading && !error && streamers.length > 0 && (
-				<p>{streamers.length} streamers encontrados.</p>
-			)}
-		</main>
+				{!isLoading && !error && streamers.length > 0 && (
+					<StreamerGrid streamers={streamers} />
+				)}
+			</main>
+
+			<Footer />
+		</div>
 	);
 }

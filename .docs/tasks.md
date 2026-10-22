@@ -23,22 +23,22 @@ Este documento organiza a implementação descrita no [PRD](./PRD.md). Cada fase
 - [x] Executar o lint e o build sem erros.
 - [x] Marcar a Fase 1 como concluída após todas as validações.
 
-## Fase 2 — Componentes e layout
+## Fase 2 — Componentes e layout ✅ Concluída
 
-- [ ] Criar ou ajustar `Header`, `StreamerGrid`, `StreamerCard` e `Footer`.
-- [ ] Montar cada card com nome, avatar, indicador de status e link para a Twitch.
-- [ ] Criar o grid com abordagem mobile first: uma coluna no celular, duas ou três no tablet e seis no desktop.
-- [ ] Aplicar HTML semântico, textos alternativos, foco visível e contraste adequado.
-- [ ] Exibir no rodapé o ano atual e os direitos reservados a Willian Developer.
+- [x] Criar ou ajustar `Header`, `StreamerGrid`, `StreamerCard` e `Footer`.
+- [x] Montar cada card com nome, avatar, indicador de status e link para a Twitch.
+- [x] Criar o grid com abordagem mobile first: uma coluna no celular, duas ou três no tablet e seis no desktop.
+- [x] Aplicar HTML semântico, textos alternativos, foco visível e contraste adequado.
+- [x] Exibir no rodapé o ano atual e os direitos reservados a Willian Developer.
 
 ### Validação da fase
 
-- [ ] Confirmar visualmente alinhamento, espaçamento, legibilidade e ausência de rolagem horizontal.
-- [ ] Solicitar prints das versões mobile e desktop para aprovação do layout.
-- [ ] Confirmar que o indicador fica verde para online e vermelho para offline.
-- [ ] Confirmar que o link abre a Twitch correta em uma nova aba com segurança.
-- [ ] Executar o lint e o build sem erros.
-- [ ] Marcar a Fase 2 como concluída após a aprovação dos prints e das validações.
+- [x] Confirmar visualmente alinhamento, espaçamento, legibilidade e ausência de rolagem horizontal.
+- [x] Solicitar prints das versões mobile e desktop para aprovação do layout.
+- [x] Confirmar que o indicador fica vermelho para online e não aparece para offline.
+- [x] Confirmar que o link abre a Twitch correta em uma nova aba com segurança.
+- [x] Executar o lint e o build sem erros.
+- [x] Marcar a Fase 2 como concluída após a aprovação dos prints e das validações.
 
 ## Fase 3 — Atualização e paginação
 

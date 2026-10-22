@@ -1,6 +1,28 @@
-main {
-	width: min(100% - 2rem, 75rem);
+.app {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	width: min(100% - 2rem, 96rem);
 	margin-inline: auto;
-	padding-block: 2rem;
+	padding-block: 2rem 3rem;
+	flex: 1;
+}
+
+.notice {
+	width: fit-content;
+	margin: 3rem auto;
+	padding: 0.85rem 1rem;
+	border: 1px solid var(--line);
+	border-radius: 0.75rem;
+	background: var(--surface);
+	color: var(--muted);
 	text-align: center;
+}
+
+.notice-error {
+	border-color: #f1a7a7;
+	color: #a12828;
 }
