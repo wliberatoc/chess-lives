@@ -58,17 +58,17 @@ Este documento organiza a implementação descrita no [PRD](./PRD.md). Cada fase
 - [x] Executar o lint e o build sem erros.
 - [x] Marcar a Fase 3 como concluída após todas as validações.
 
-## Fase 4 — Revisão final
+## Fase 4 — Revisão final ✅ Concluída
 
-- [ ] Revisar mensagens de carregamento, erro e lista vazia.
-- [ ] Remover código antigo ou não utilizado que não faça parte do catálogo.
-- [ ] Conferir o projeto em larguras mobile e desktop por meio dos prints fornecidos.
-- [ ] Revisar o conteúdo em relação aos requisitos e critérios de aceite do PRD.
+- [x] Revisar mensagens de carregamento, erro e lista vazia.
+- [x] Remover código antigo ou não utilizado que não faça parte do catálogo.
+- [x] Conferir o projeto em larguras mobile e desktop por meio dos prints fornecidos.
+- [x] Revisar o conteúdo em relação aos requisitos e critérios de aceite do PRD.
 
 ### Validação da fase
 
-- [ ] Executar lint e build finais sem erros.
-- [ ] Confirmar que todos os critérios de aceite do PRD foram atendidos.
-- [ ] Registrar eventuais pendências de filtros e favoritos como melhorias futuras.
-- [ ] Marcar a Fase 4 e o projeto como concluídos somente após a aprovação final.
+- [x] Executar lint e build finais sem erros.
+- [x] Confirmar que todos os critérios de aceite do PRD foram atendidos.
+- [x] Registrar eventuais pendências de filtros e favoritos como melhorias futuras.
+- [x] Marcar a Fase 4 e o projeto como concluídos somente após a aprovação final.
 

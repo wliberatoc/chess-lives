@@ -10,6 +10,9 @@ export async function fetchStreamers(signal?: AbortSignal) {
 	}
 
 	const data: StreamersResponse = await response.json();
+	if (!Array.isArray(data.streamers)) {
+		throw new Error('Resposta inválida da API de streamers.');
+	}
 
 	return data.streamers;
 }
